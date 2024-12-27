@@ -1,0 +1,17 @@
+<div class="container mt-5">
+    <h2>Add Task</h2>
+    <form (ngSubmit)="addTask()" class="mt-3">
+      <div class="form-group">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Task Title"
+          [(ngModel)]="title"
+          name="title"
+          required
+        />
+      </div>
+      <button type="submit" class="btn btn-success mt-2">Add Task</button>
+    </form>
+  </div>
+  

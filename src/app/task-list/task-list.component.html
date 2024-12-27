@@ -1,0 +1,35 @@
+<div class="container mt-5">
+    <h2>Task List</h2>
+    <table class="table table-bordered mt-3">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Title</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let task of tasks; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td>{{ task.title }}</td>
+          <td>{{ task.status }}</td>
+          <td>
+            <button
+              class="btn btn-sm btn-primary"
+              (click)="updateTask(task.id, task.status)"
+            >
+              Toggle Status
+            </button>
+            <button
+              class="btn btn-sm btn-danger"
+              (click)="deleteTask(task.id)"
+            >
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
